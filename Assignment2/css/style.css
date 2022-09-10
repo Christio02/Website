@@ -1,0 +1,22 @@
+img {
+    width: 150px;
+    height: 140px;
+    border-radius: 75px;
+    border-style: 5 px solid #0000;
+    float: left;
+    margin-right: 50px;
+}
+ .Section2{
+    margin-top: 100px;
+    
+}
+header {
+    font-family: Verdana, sans-serif;
+}
+body {
+    background-color: #ccf0ff; 
+    
+}
+section {
+    font-family: Helvetica, sans-serif;
+}
