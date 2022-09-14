@@ -2,7 +2,7 @@ img {
     width: 150px;
     height: 140px;
     border-radius: 75px;
-    border-style: 5 px solid #0000;
+    border: 5px black solid;
     float: left;
     margin-right: 50px;
 }
@@ -11,12 +11,12 @@ img {
     
 }
 header {
-    font-family: Verdana, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
 }
 body {
     background-color: #ccf0ff; 
     
 }
 section {
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
