@@ -1,15 +1,19 @@
 1. The reason why inline style CSS, override rules defined in style elements and external stylesheets, is because the inline style CSS
 is technically closer to the elements it styles. Which means that it has a higher precedence compared to "style elements" and 
 external stylesheets. 
+
 2. We use ID (#id) for single elements that only appears once, like header, footer (our example in the assignment). Classes (.class) are used for either
 single or multiple elements that appear more than once on the page. E.g. paragraphs, sections.
+
 3. RGBA stands for Red-Green-Blue-Alpha, where the "Alpha" specifies the opacity of the color. You can express many different colors, and according to 
 w3schools.com, there are 256 * 256 * 256 colors, or 16 777 216 possible colors. This is because the three parameters (red, green, and blue) defines the color
 with a value between 0 and 255.
+
 4. The reason why we inlude CSS files inside the <head> element and not the <body> element is because all "elements" that are inside the <head> element
 are not displayed. The information here is the metadata for the browser, and includes e.g. the document title, scripts, styles. We could also include in the <body>
 element, but then it would take the browser longer to load the style attributes. This is because the styles already have loaded when the CSS is declared before the <body>
 element.
+
 5. The CSS selector that matches all the <p> elements inside the <article> element is the element selector, in this example it is the p element: E.g.:
 p {
 color: red;

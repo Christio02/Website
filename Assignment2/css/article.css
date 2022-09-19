@@ -1,7 +1,7 @@
 article {
     width: 960px;
     margin: auto;
-    font-family: Verdana, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     max-width: 67ch;
     line-height: 1.5;
     font-size: 19px;  
@@ -39,7 +39,11 @@ p, blockquote, ul, ol {
     line-height: 1.5em;
     padding-left: 1.5em;
 }
-img{
+img {
     width: 960px;
 
+}
+
+.border  {
+    border-top: 1px solid #323232;
 }
