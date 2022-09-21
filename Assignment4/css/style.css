@@ -31,6 +31,9 @@
   article {
     width: 720px;
     margin: 20px 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: center;
   }
 
   p {
@@ -38,3 +41,14 @@
     font-size: 16px;
     line-height: 1.5;
   }
+
+@media screen 
+and (max-width: 940px) {
+  video {
+    display: none;
+  }
+  img {
+    display: block;
+     }
+}
+  
