@@ -33,7 +33,11 @@
     margin: 20px 50px;
     margin-left: 10%;
     margin-right: 10%;
-    position: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    position: relative;
+    left: 10%;
+    
   }
 
   p {
@@ -42,8 +46,7 @@
     line-height: 1.5;
   }
 
-@media screen 
-and (max-width: 940px) {
+@media only screen and (max-width: 940px) {
   video {
     display: none;
   }
