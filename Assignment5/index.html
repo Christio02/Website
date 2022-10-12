@@ -25,6 +25,10 @@
         margin: 10px;
         text-align: center;
       }
+      #tech {
+        width: 5px;
+        color: rgb(0, 0, 0);
+      }
     </style>
   </head>
   <body>
@@ -33,9 +37,9 @@
 
     <h2>Part 5</h2>
     <div class='buttons'>
-      <button>Display: none </button>
-      <button>Visibility: hidden</button>
-      <button>Reset</button>
+      <button id = "display">Display: none </button>
+      <button id = "visibility">Visibility: hidden</button>
+      <button id = "reset">Reset</button>
     </div>
     <div class='box' id='magic'> 1 </div>
     <div class='box'> 2 </div>
@@ -43,7 +47,9 @@
     <h2>Part 6</h2>
     <ul id='tech'>
     </ul>
+
+  <!--Part 1-->
     <script src="script.js"></script> <!--Links the JavaScript file to the HTML document. The reason it's placed at then end
-    of the body tag, is because the elements should be rendered before the JS file applies it code to the webpage. This is to avoid any comnflicts-->
+    of the body tag, is because the elements should be rendered before the JS file applies its code to the webpage. This is to avoid any conflicts and errors-->
   </body>
 </html>
