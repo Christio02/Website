@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang ="no">
+    <head>
+        <title>Tax form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tax form for superheroes</h1>
+        </header>
+    <div class = "form">
+        <form action="https://folk.ntnu.no/anderobs/webtek/receive_form.php" method="post">
+            <br> <br>
+            <label for="name">Real Name</label>
+
+            <input type="text" name="name" required >
+            <br> <br>
+
+            <p> Gender
+                <br> <br>
+                <label> 
+                    Select:
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </label>
+
+            </p>
+            <br>
+
+            <label>
+                E-mail
+                <input type="email" name="email" id="email" required>
+            </label>
+
+            <br> <br>
+
+            <label>
+                Birthdate
+                <input type="date" name="birthdate" id="birthdate" required>
+            </label>
+
+            <br> <br>
+
+            <label>
+                Hero name: 
+                <input type="text" name="hero" id="hero" required >
+            </label>
+
+            <br> <br>
+
+            <label>
+                Do you wear spandex?
+                <input type="checkbox" name="spandex" id="spandex">
+            </label>
+
+            <br> <br>
+
+            <label>
+                Strength:
+                <input type="range" min = "1" max = "10" step = "1" required name = "strength">
+            </label>
+
+            <br> <br>
+
+            <label>
+                Speed:
+                <input type="range" min = "1" max = "10" step = "1" required name = "speed">
+            </label>
+
+            <br> <br> 
+
+            <label>
+                Intelligence
+                <input type="range" min = "1" max = "10" step = "1" required name = "intelligence">
+            </label>
+
+            <br> <br>
+
+            <label>
+                Income
+                <input type="number" name="income" id="income" required min = "0">
+            </label>
+
+            <br> <br>
+
+            <label>
+                Wealth
+                <input type="number" name="wealth" id="wealth" required min = "0">
+            </label>
+
+            <br> <br>
+
+            <label>
+                Tax
+                <input type="number"  name = "tax" id = "tax" disabled>
+            </label>
+
+        <button id = "button"> Submit Tax Form</button>
+            
+        
+
+
+        </form>
+    </div>
+    <script src = "script.js"></script>
+    </body>
+</html>
