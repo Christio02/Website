@@ -7,4 +7,4 @@
 4. Why is it considered bad practice to only validate form input with HTML5 and/or Javascript?
 - By only validating form input with HTML5 and/or JavaScript because the client can easily be manipulated and the user can bypass the validation
 5. When is it appropriate to use textarea over input?
-- When the user needs to enter a large amount of text
+- When the user needs to enter a large amount of text, input is for short text
