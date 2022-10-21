@@ -14,28 +14,35 @@ function addTodo () {
 
     newTodo.style.listStyle = "none"; 
 
-
-    function addNewTask () { // functions that creates list and adds the items to an array in the console
+    // functions that creates list and adds the items to an array in the console
+    function addNewTask () { 
         newTodo.innerHTML = input.value
 
         list.appendChild(newTodo);
 
-        tasks.push(input.value);
-        console.log(tasks);
+        let date = new Date();
         
-        if (input.value === "") {
-            alert("Please do not leave the input field empty");
-            // remove checkbox and list item if input is empty¨
-            newTodo.remove();
-            tasks.childNodes.remove();
+        
+        tasks.push(input.value, date);
+        console.log(tasks);
+
+         
+
+        //optional code to prevent empty input
+        
+        // if (input.value === "") { 
+        //     alert("Please do not leave the input field empty");
+        //     // remove checkbox and list item if input is empty¨
+        //     newTodo.remove();
+        //     tasks.childNodes.remove();
             
 
-        }
+        // }
     } 
 
     addNewTask()
-
-    function newItemTop () { // function that insert a new item on top of the list
+    // function that insert a new item on top of the list
+    function newItemTop () { 
         list.insertBefore(newTodo, list.childNodes[0]);
     }
     newItemTop();
@@ -66,18 +73,23 @@ function addTodo () {
     addLineCheck()
 
     input.value = '' ; // resets the input field
+    
 
-    function newDateTodo () {
-        let date = new Date();
-        tasks.push(date);
+    // create a function that updates how many tasks are left and removes tasks when checkbox is clicked
+    function updateOutput () {
+        // remove date element from output 
+        output.innerHTML = tasks.length-1;
+        if (tasks.length === 0) {
+            output.innerHTML = 0;
+        }
+        if (newTodo.style.textDecoration === "line-through") {
+            (output.innerHTML = tasks.length - 1)
+        }
+       
+        
     }
 
-    newDateTodo();
-
-    function addCounterOutput() {
-        output.innerHTML = tasks.length;
-    }
-    addCounterOutput();
+    updateOutput();
 
 
 }

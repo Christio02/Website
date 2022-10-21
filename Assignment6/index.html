@@ -2,7 +2,7 @@
 <html lang ="no">
     <head>
         <title>Tax form</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -13,9 +13,10 @@
     <div class = "form">
         <form action="https://folk.ntnu.no/anderobs/webtek/receive_form.php" method="post">
             <br> <br>
-            <label for="name">Real Name</label>
-
+            <label>
+                Real Name
             <input type="text" name="name" required >
+            </label>
             <br> <br>
 
             <p> Gender
@@ -61,21 +62,24 @@
 
             <label>
                 Strength:
-                <input type="range" min = "1" max = "10" step = "1" required name = "strength">
+                <input type="range" min = "1" max = "10" step = "1"  name = "strength" oninput="num.value = this.value">
+                <output name="num" for="strength">6</output>
             </label>
 
             <br> <br>
 
             <label>
                 Speed:
-                <input type="range" min = "1" max = "10" step = "1" required name = "speed">
+                <input type="range" min = "1" max = "10" step = "1"  name = "speed" oninput="num2.value = this.value">
+                <output name="num2" for="speed">6</output>
             </label>
 
             <br> <br> 
 
             <label>
                 Intelligence
-                <input type="range" min = "1" max = "10" step = "1" required name = "intelligence">
+                <input type="range" min = "1" max = "10" step = "1"  name = "intelligence" oninput="num3.value = this.value">
+                <output name="num3" for="intelligence">6</output>
             </label>
 
             <br> <br>
