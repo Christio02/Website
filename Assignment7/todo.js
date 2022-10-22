@@ -1,13 +1,17 @@
+
 const submitBtn = document.querySelector('#submitbtn');
 
 const input = document.querySelector("#input-field");
 
 const list = document.querySelector("#list");
 
-const output = document.querySelector("#output")
+const output = document.querySelector("#output-field")
+
+const completed = document.querySelector('#completed-field');
 
 
 const tasks = [];
+
 
 function addTodo () {
     let newTodo = document.createElement('li');
@@ -20,12 +24,12 @@ function addTodo () {
 
         list.appendChild(newTodo);
 
-        let date = new Date();
-        
-        
-        tasks.push(input.value, date);
+        tasks.push(input.value);
         console.log(tasks);
 
+        let date = new Date();
+        
+        submitBtn.addEventListener('click', console.log(date));
          
 
         //optional code to prevent empty input
@@ -56,11 +60,10 @@ function addTodo () {
     }
 
     addCheckbox()
-
+    const checkbox = document.querySelector('.checkbox'); // gets the class for checkbox
 
     // function that adds a line through the list item when the checkbox is clicked and removes it when the checkbox is clicked again
     function addLineCheck () {
-        let checkbox = document.querySelector('.checkbox'); // gets the class for checkbox
         checkbox.addEventListener('click', function () { // adds eventlistener for clikcing checkbox
             if (checkbox.checked) { 
                 newTodo.style.textDecoration = "line-through"; // if checkbox clicked, then line through
@@ -76,24 +79,36 @@ function addTodo () {
     
 
     // create a function that updates how many tasks are left and removes tasks when checkbox is clicked
-    function updateOutput () {
-        // remove date element from output 
-        output.innerHTML = tasks.length-1;
-        if (tasks.length === 0) {
-            output.innerHTML = 0;
-        }
-        if (newTodo.style.textDecoration === "line-through") {
-            (output.innerHTML = tasks.length - 1)
-        }
-       
-        
+    function totalTasks () { 
+        output.innerHTML = tasks.length; // updates the output with the length of the array (how many tasks in total)
     }
 
-    updateOutput();
+    totalTasks();
+
+   
+
+    function completedTasks () { 
+        counter = 0;
+        completed.innerHTML = counter;
+        checkbox.addEventListener('click', function () { // adds eventlistener for clicking checkbox
+            if (checkbox.checked) { // if the checkbox is "checked" it should add a number to the counter
+                counter +=1;
+                completed.innerHTML = (`${counter} / ${tasks.length}`) // displays this as a fraction
+            }
+            else if (checkbox.checked === false) { // if i'ts "unchecked" it should remove one "point" from the counter
+                counter -= 1;
+                completed.innerHTML = (`${counter} / ${tasks.length}`)  // displays as a fraction
+            }
+        
+        })
+                
+    }
+    completedTasks();
 
 
 }
-submitBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    addTodo();
+
+submitBtn.addEventListener('click', function(event) { // function that adds an eventlistener to the button
+    event.preventDefault(); // prevents the page to reload when you submit
+    addTodo(); // runs the main function when you submit a task
 });

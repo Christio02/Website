@@ -8,31 +8,46 @@
     <title>Todo list</title>
 </head>
 <body>
-    <header><h1>Todo list</h1></header>
+    <header>
+        <h1>Todo list</h1>
+        <h3>Your own personal to-do-list!</h3>
+    </header>
     <div class = "container">
         <form>
-            <label for="submit">
-                Add task:
-                <input type="submit" name = "submit" id = "submitbtn">
-            </label>
 
-            <label for="add-todo">
-                Write a task:
-                <input type="text" name = "todo" id = "input-field" required autofocus >
-            </label>
-            
-            <label>
-                Tasks:
-                <output name = "counter" id = "output"></output>
-            </label>
+            <div class = "submit">
+                    <button id = "submitbtn">Add task</button> <!--Could have used input type = "submit", but I read on stackoverflow that <button> has more pros Link: https://stackoverflow.com/questions/7117639/input-type-submit-vs-button-tag-are-they-interchangeable-->
+             </div>
+             
+             <div class = "input">
+                <label for="add-todo">
+                    Write a task:
+                    <input type="text" name = "todo" id = "input-field"  autofocus required >
+                </label>
+            </div>
+
+            <div class ="total">
+                <label>
+                    Tasks in total:
+                    <output name = "counter" id = "output-field"></output>
+                </label>
+            </div>
+
+            <div class = "completed">
+                <label>
+                    Completed tasks:
+                    <output name = "completed" id = "completed-field"></output>
+                </label>
+            </div>
         
         </form>
 
-        <div class = "container2">
-            <ul id = "list"> </ul>   
-        </div>
+            <div class = "container2">
+                <ul id = "list"> </ul>   
+            </div>
 
     </div>
+
     <script src="todo.js"></script>
 </body>
 </html>

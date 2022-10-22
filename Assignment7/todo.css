@@ -1,1 +1,151 @@
+ /* All box shadow values from https://cssgenerator.org/box-shadow-css-generator.html */
+
+body {
+    background-color: #e3e3e3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+
+}
+
+
+form {
+    display: grid; /* makes the form a grid and centers everything */
+    place-items: center;
+    align-content: center;
+} 
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.submit {
+    border: 5px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    width: 50%;
+    box-shadow: 2px -11px 98px 39px rgba(0,0,0,0.41); 
+
+}
+
+#submitbtn {
+    background-color: #e3e3e3;
+    color: #333;
+    font-size: 20px;
+    padding: 10px;
+    border: 11px ridge #333;
+    border-radius: 5px;
+    width: 30%;
+    margin: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; /* adds a box shadow to the button rgb is the color*/
+    transition-duration: 0.3s;
+
+}
+
+#submitbtn:hover {
+    background-color: #5adbb5;
+    color: #fff;
+    cursor: pointer; /* changes the cursor to a hand when hovering over the button */
+    box-shadow: 0 12px 16px 0 rgba(38, 57, 77), 0 17px 50px 0 rgba(0,0,0,0.19); /* changes the box shadow on hover */
+
+}
+
+#submitbtn:active { /* changes the box shadow on click  and makes the button interact with the user */
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.input {
+    border: 5px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+    box-shadow: -7px 36px 187px 9px rgba(0,0,0,0.57);
+}
+
+#input-field {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+
+}
+
+#input-field:focus {
+    border:rgb(38, 57, 77) 5px solid; /* changes the border color when the input field is focused */
+    
+    
+}
+
+.total {
+    
+    display: grid;
+    place-items: center;
+    align-content: center;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid #333;
+    border-radius: 5px;
+    height: 50px;
+    box-shadow: 1px -41px 262px -20px rgba(0,0,0,0.46) inset;
+    
+    
+}
+
+.completed {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid #333;
+    border-radius: 5px;
+    height: 50px;
+    box-shadow: 1px -41px 262px -20px rgba(0,0,0,0.46) inset;
+}
+.container2 {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+}
+
+ul li {  /* styles the list */
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #e3e3e3;
+    font-size: 18px;
+    transition: 0.2s;
+    vertical-align: middle;
+
+}
+
+/* change style on hover */
+ul li:hover {
+    background: #eee;
+}
+
+.checkbox { /* styles the checkbox */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 20px;
+    background-color: #eee;
+}
+ul li .checkbox:checked  { /* styles the label when the checkbox is checked */
+    background-color:rgb(38, 57, 77)
+}
+
 
