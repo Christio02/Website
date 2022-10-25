@@ -1,6 +1,6 @@
  /* All box shadow values from https://cssgenerator.org/box-shadow-css-generator.html */
 
-body {
+body { /* styles the body and adds font */
     background-color: #e3e3e3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
@@ -8,7 +8,6 @@ body {
     text-align: center;
 
 }
-
 
 form {
     display: grid; /* makes the form a grid and centers everything */
@@ -111,6 +110,7 @@ form {
     height: 50px;
     box-shadow: 1px -41px 262px -20px rgba(0,0,0,0.46) inset;
 }
+
 .container2 {
     display: grid;
     place-items: center;
@@ -148,4 +148,10 @@ ul li .checkbox:checked  { /* styles the label when the checkbox is checked */
     background-color:rgb(38, 57, 77)
 }
 
-
+/* places the validator div top-right of the page */
+.validator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}

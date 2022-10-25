@@ -9,6 +9,7 @@ const output = document.querySelector("#output-field")
 
 const completed = document.querySelector('#completed-field');
 
+const checkbox = document.getElementsByClassName('checkbox');
 
 const tasks = [];
 
@@ -29,27 +30,18 @@ function addTodo () {
 
         let date = new Date();
         
-        submitBtn.addEventListener('click', console.log(date));
-         
-
-        //optional code to prevent empty input
-        
-        // if (input.value === "") { 
-        //     alert("Please do not leave the input field empty");
-        //     // remove checkbox and list item if input is empty¨
-        //     newTodo.remove();
-        //     tasks.childNodes.remove();
-            
-
-        // }
-    } 
+        submitBtn.addEventListener('click', console.log(date)); // adds the date for each task to console (not array, be)
+    }
 
     addNewTask()
+
     // function that insert a new item on top of the list
     function newItemTop () { 
         list.insertBefore(newTodo, list.childNodes[0]);
     }
     newItemTop();
+
+
 
     // function that creates checkbox left of list
     function addCheckbox () {
@@ -64,7 +56,7 @@ function addTodo () {
 
     // function that adds a line through the list item when the checkbox is clicked and removes it when the checkbox is clicked again
     function addLineCheck () {
-        checkbox.addEventListener('click', function () { // adds eventlistener for clikcing checkbox
+        checkbox.addEventListener('click', function () { // adds eventlistener for clicking checkbox
             if (checkbox.checked) { 
                 newTodo.style.textDecoration = "line-through"; // if checkbox clicked, then line through
             } else {
@@ -83,12 +75,12 @@ function addTodo () {
         output.innerHTML = tasks.length; // updates the output with the length of the array (how many tasks in total)
     }
 
-    totalTasks();
+    totalTasks(); 
 
    
 
     function completedTasks () { 
-        counter = 0;
+        counter = 0; // counter which counts how many tasks are completed
         completed.innerHTML = counter;
         checkbox.addEventListener('click', function () { // adds eventlistener for clicking checkbox
             if (checkbox.checked) { // if the checkbox is "checked" it should add a number to the counter
@@ -105,8 +97,11 @@ function addTodo () {
     }
     completedTasks();
 
+    // function that removes the task when a button is clicked
+    
 
 }
+
 
 submitBtn.addEventListener('click', function(event) { // function that adds an eventlistener to the button
     event.preventDefault(); // prevents the page to reload when you submit
