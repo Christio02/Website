@@ -97,8 +97,33 @@ function addTodo () {
     }
     completedTasks();
 
-    // function that removes the task when a button is clicked
-    
+    // function that removes the task when a button is clicked, should add a button next to each task
+    function removeTask () {
+        let removeBtn = document.createElement('button');
+        removeBtn.innerHTML = 'x'; // styles the button
+        removeBtn.style.marginLeft = '5px';
+        newTodo.appendChild(removeBtn);
+       
+        removeBtn.addEventListener('click', function () { // adds eventlistener for clicking removeBtn
+            newTodo.remove(); // removes the task
+
+            if (checkbox.checked) { // if the checkbox is checked, and the user removes the task, it should remove one point from the counter
+                tasks.splice(tasks.indexOf(input.value), 1); // removes the task from the array
+                console.log(tasks); // logs the new array
+                totalTasks(); // calls the function to update the output
+                completedTasks(); // calls the function to update the completed tasks
+
+            } else { // else, if the heck
+                tasks.splice(tasks.indexOf(input.value), 1); // removes the task from the array
+                console.log(tasks); // logs the new array
+               // output.innerHTML = tasks.length; // updates the output with the length of the array (how many tasks in total)
+                totalTasks(); // calls the function to update the output
+            }
+            
+        })
+    }
+        removeTask();
+
 
 }
 
