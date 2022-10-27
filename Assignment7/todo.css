@@ -38,7 +38,7 @@ form {
     color: #333;
     font-size: 20px;
     padding: 10px;
-    border: 11px ridge #333;
+    border: 7px ridge #333;
     border-radius: 5px;
     width: 30%;
     margin: 5px;
@@ -85,20 +85,6 @@ form {
     
 }
 
-.total {
-    
-    display: grid;
-    place-items: center;
-    align-content: center;
-    margin: 20px;
-    padding: 10px;
-    border: 5px solid #333;
-    border-radius: 5px;
-    height: 50px;
-    box-shadow: 1px -41px 262px -20px rgba(0,0,0,0.46) inset;
-    
-    
-}
 
 .completed {
     display: grid;

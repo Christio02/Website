@@ -16,20 +16,13 @@
         <form>
 
             <div class = "submit">
-                <button id = "submitbtn">Add task</button> <!--Could have used input type = "submit", but I read on stackoverflow that <button> has more pros. Link: https://stackoverflow.com/questions/7117639/input-type-submit-vs-button-tag-are-they-interchangeable-->
+                <button id = "submitbtn" disabled>Add task</button> <!--Could have used input type = "submit", but I read on stackoverflow that <button> has more pros. Link: https://stackoverflow.com/questions/7117639/input-type-submit-vs-button-tag-are-they-interchangeable-->
              </div>
              
              <div class = "input">
                 <label>
                     Write a task:
-                    <input type="text" name = "todo" id = "input-field"  autofocus required >
-                </label>
-            </div>
-
-            <div class ="total">
-                <label>
-                    Tasks in total:
-                    <output name = "counter" id = "output-field"></output>
+                    <input type="text" name = "todo" id = "input-field" autofocus  placeholder="Enter task..." >
                 </label>
             </div>
 
