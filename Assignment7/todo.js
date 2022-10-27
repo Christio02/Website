@@ -82,8 +82,6 @@ function addTodo () {
         checkbox.addEventListener('click', function () { // adds eventlistener for clicking checkbox
             if (checkbox.checked) { // if the checkbox is "checked" it should add a number to the counter
                 counter +=1;
-                tasks.pop(input.value); // removes the task from the array
-                console.log(tasks);
                 completed.innerHTML = (`${counter} / ${tasks.length}`) // displays this as a fraction
             }
             else if (checkbox.checked === false) { // if i'ts "unchecked" it should remove one "point" from the counter
@@ -113,20 +111,6 @@ function addTodo () {
         })
     }
     removeTask();    
-
-    // add a function that disables remove button when checkbox is not checked
-    function disableRemove () {
-        removeBtn.disabled = true;
-        checkbox.addEventListener('click', function () {
-            if (checkbox.checked) {
-                removeBtn.disabled = false;
-            }
-            else if (checkbox.checked === false) {
-                removeBtn.disabled = true;
-            }
-        })
-    }
-    disableRemove();
     
    
 }
