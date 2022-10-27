@@ -111,6 +111,17 @@ function addTodo () {
         })
     }
     removeTask();    
+
+    // function that alerts the user when reloading the page
+    function reloadAlert () {
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+    }
+    reloadAlert();
+   
+
     
    
 }
@@ -121,7 +132,7 @@ submitBtn.addEventListener('click', function(event) { // function that adds an e
     addTodo(); // runs the main function when you submit a task
 });
 
-// function that enables submit button when input field is not empty
+ // function that enables submit button when input field is not empty
 input.addEventListener('input', function () {
     if (input.value.length === 0 || input.value === '') {
         submitBtn.style.opacity = "0.5";
@@ -131,5 +142,7 @@ input.addEventListener('input', function () {
         submitBtn.style.opacity = "1";
     }
 })
+
+
 
         
