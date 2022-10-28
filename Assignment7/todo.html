@@ -17,19 +17,23 @@
         <form>
 
             <div class = "submit">
-                <button id = "submitbtn" disabled>Add task</button> <!--Could have used input type = "submit", but I read on stackoverflow that <button> has more pros. Link: https://stackoverflow.com/questions/7117639/input-type-submit-vs-button-tag-are-they-interchangeable-->
-             </div>
-             
-             <div class = "input">
                 <label>
-                    Write a task:
-                    <input type="text" name = "todo" id = "input-field" autofocus  placeholder="Enter task..." >
+                    Add Task:
+
+                <input type = "submit" id = "submitbtn" /> 
+                
                 </label>
+                </div>
+             
+             <div class = "input">  
+            <!-- The required attribute is not working, so you can add "empty" tasks. Can't dix the problem :( -->
+                    <input type="text" name = "input" id = "input-field"  autofocus placeholder="Enter task..." required/>
+
             </div>
 
             <div class = "completed">
                 <label>
-                    Completed tasks:
+                    <b>Completed tasks:</b>
                     <output name = "completed" id = "completed-field"></output>
                 </label>
             </div>
@@ -55,7 +59,7 @@
             <img style="border:0;width:88px;height:31px"
                 src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
                 alt="Valid CSS!"/>
-            </a>
+        </a>
         </p>
     </div>
 

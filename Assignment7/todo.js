@@ -3,23 +3,20 @@ const submitBtn = document.querySelector('#submitbtn');
 
 const input = document.querySelector("#input-field");
 
-const list = document.querySelector("#list");
+const list = document.getElementById("list");
 
 const completed = document.querySelector('#completed-field');
 
-const checkbox = document.getElementsByClassName('checkbox');
+const checkbox = document.getElementById('checkbox');
 
 const tasks = [];
 
 
 function addTodo () {
-    let newTodo = document.createElement('li');
+    
+    const newTodo = document.createElement('li');
 
     newTodo.style.listStyle = "none"; 
-
-
-   // function that disables submit button when input field is empty
-   submitBtn.disabled = true;
     
 
  // functions that creates list and adds the items to an array in the console
@@ -39,6 +36,7 @@ function addTodo () {
     addNewTask()
 
 
+
     
 
     // function that insert a new item on top of the list
@@ -53,13 +51,13 @@ function addTodo () {
     function addCheckbox () {
         let checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.className = "checkbox";
+        checkbox.id = "checkbox";
         newTodo.prepend(checkbox);
     }
 
     addCheckbox()
     
-    const checkbox = document.querySelector('.checkbox'); // gets the class for checkbox
+    const checkbox = document.getElementById('checkbox');
 
     // function that adds a line through the list item when the checkbox is clicked and removes it when the checkbox is clicked again
     function addLineCheck () {
@@ -98,19 +96,22 @@ function addTodo () {
     function removeTask () {
         let removeBtn = document.createElement('button');
         removeBtn.id = "removeBtn";
-        removeBtn.innerHTML = 'x'; // styles the button
-        removeBtn.style.marginLeft = '5px';
+        removeBtn.innerHTML = "Remove";
         newTodo.appendChild(removeBtn);
+        removeBtn.addEventListener('click', () => {
+                newTodo.remove();
+                tasks.pop(input.value);
+                console.log(tasks);
+                counter -= 1;
+                completed.innerHTML = (`${counter} / ${tasks.length}`);
+                if (tasks.length === 0) { // if there are no tasks left, the counter should be 0 a
+                    counter = 0;
+                    completed.innerHTML = (`${counter} / ${tasks.length}`);
+                }
 
-        removeBtn.addEventListener('click', function () { // adds eventlistener for clicking the button
-            newTodo.remove(); // removes the task
-            tasks.pop(); // removes the task from the array
-            console.log(tasks);
-            counter -= 1; // removes one point from the counter
-            completed.innerHTML = (`${counter} / ${tasks.length}`) // displays as a fraction
-        })
+            })
     }
-    removeTask();    
+    removeTask();
 
     // function that alerts the user when reloading the page
     function reloadAlert () {
@@ -120,29 +121,13 @@ function addTodo () {
         });
     }
     reloadAlert();
-   
 
-    
-   
+
 }
-
-
 submitBtn.addEventListener('click', function(event) { // function that adds an eventlistener to the button
     event.preventDefault(); // prevents the page to reload when you submit
     addTodo(); // runs the main function when you submit a task
 });
 
- // function that enables submit button when input field is not empty
-input.addEventListener('input', function () {
-    if (input.value.length === 0 || input.value === '') {
-        submitBtn.style.opacity = "0.5";
-        submitBtn.disabled = true;
-    } else {
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = "1";
-    }
-})
 
 
-
-        
