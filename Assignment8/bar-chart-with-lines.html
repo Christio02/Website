@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8">
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+
+    <canvas id="chart" width="700" height="550"></canvas>
+
+    <script>
+      const canvas = document.getElementById('chart');
+      const context = canvas.getContext('2d');
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+        context.closePath();
+      }
+
+      /* Draw a text (string) on (x, y) */
+      function drawText(text, x, y) {
+        context.fillStyle = 'black';
+        context.fillText(text, x, y);
+      }
+
+      /* Draw a text and with a line to its right */
+      function drawLineWithText(text, fromX, fromY, toX, toY) {
+        drawText(text, fromX - 50, fromY + 10);
+        drawLine(fromX, fromY, toX, toY);
+      }
+
+      /* Insert your code here. */
+
+      // draw lines and text 10 times
+      
+      function draw10Lines() {
+        context.lineWidth = 2;
+        context.font = "12px Arial";
+        for (let i = 0; i < 10; i++) {
+          // draw all the lines 
+          drawLine(100, 50 + i * 50, 600, 50 + i * 50);
+        // draws text from 100 000 to 1 000 000
+          drawText(1000000 - i * 100000, 40, 50 + i * 50);
+          
+        }
+      }
+      draw10Lines();
+      
+      
+
+      
+      
+    </script>
+  </body>
+</html>
