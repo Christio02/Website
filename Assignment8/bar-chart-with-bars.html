@@ -74,8 +74,28 @@
         createRec('red', 570, 50, 50, 25);
         createRec('blue', 570, 85, 50, 25);
     
+      function createBars(i) {
+        // create bars
+            let x = (i + 1) * 150; // x coordinate og spacing
+ 
+            let width = 50; // width of each bar
+
+            let income = taxForms[i].income;
+            let wealth = taxForms[i].wealth;
+            
+            let heightIncome = income / 1100000 * 550; // sets the height of the income bar // remapping the values
+            let heightWealth = wealth / 1100000 * 550; // sets the height of the wealth bar 
+
+            let distance = 6; // distance between the bars
+
+            createRec('red', x - width - distance, 550 - heightIncome, width, heightIncome);
+            createRec('blue', x + distance, 550 - heightWealth, width, heightWealth);
     
-  
+
+     }    
+        for (let i = 0; i < taxForms.length; i++) {
+            createBars(i);
+        }
 
       
       
