@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <canvas id="chart" width="700" height="550"></canvas>
+    <canvas id="chart" width="700" height="600"></canvas>
 
     <script>
       const canvas = document.getElementById('chart');
@@ -55,7 +55,7 @@
       function createLabel() {
         // create labels
         let txt1 = "Income"
-        let txt2 = "Tax"
+        let txt2 = "Wealth"
 
         context.fillStyle = 'black';
         drawText(txt1, 625, 65);
@@ -86,12 +86,12 @@
             let heightWealth = wealth / 1100000 * 550; // sets the height of the wealth bar 
 
             let distance = 6; // distance between the bars
-
+            // creates bars for wealth and income
             createRec('red', x - width - distance, 550 - heightIncome, width, heightIncome);
             createRec('blue', x + distance, 550 - heightWealth, width, heightWealth);
     
 
-     }    
+     }    // create bars for each person in the array
         for (let i = 0; i < taxForms.length; i++) {
             createBars(i);
         }
@@ -99,12 +99,12 @@
       function createLabelNames() {
         // create labels for bars
         let wayne = "Bruce Wayne";
-        let selina = "Selina Kyle";
         let blake = "John Blake";
-
-        drawText(wayne, 150, 575);
-        drawText(selina, 300, 575);
-        drawText(blake, 450, 575);
+        let selina = "Selina Kyle";
+      
+        drawText(wayne, 120, 575);
+        drawText(blake, 278, 575);
+        drawText(selina, 420, 575);
 
       }
       createLabelNames();
