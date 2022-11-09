@@ -43,8 +43,6 @@
         context.lineWidth = 2;
         context.font = "12px Arial";
         for (let i = 0; i < 10; i++) {
-          // draw all the lines 
-          // add space between the lines
         
           drawLine(65, 50 + i * 50, 550, 50 + i * 50);
         // draws text from 100 000 to 1 000 000
@@ -53,16 +51,16 @@
         }
       }
       draw10Lines();
-
+      // create labels
       function createLabel() {
         // create labels
         let txt1 = "Income"
         let txt2 = "Tax"
 
         context.fillStyle = 'black';
-        context.fillText(txt1, 625, 70);
+        drawText(txt1, 625, 65);
 
-        context.fillText(txt2, 625, 105);
+        drawText(txt2, 625, 105);
         }
 
     createLabel();
@@ -98,6 +96,18 @@
             createBars(i);
         }
 
+      function createLabelNames() {
+        // create labels for bars
+        let wayne = "Bruce Wayne";
+        let selina = "Selina Kyle";
+        let blake = "John Blake";
+
+        drawText(wayne, 150, 575);
+        drawText(selina, 300, 575);
+        drawText(blake, 450, 575);
+
+      }
+      createLabelNames();
       
       
     </script>

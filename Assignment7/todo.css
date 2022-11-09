@@ -42,7 +42,7 @@ form {
     border-radius: 5px;
     width: 30%;
     margin: 5px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 56px -10px; /* adds a box shadow to the button rgb is the color*/
+    box-shadow: rgb(38, 57, 77) 0px 20px 56px -10px; /* adds a box shadow to the button; rgb is the color*/
     transition-duration: 0.2s;
 
 }
@@ -151,6 +151,7 @@ ul li .checkbox:checked  { /* styles the label when the checkbox is checked */
 
 }
 
+/* styles the delete button */
 #removeBtn {
     border: 5px solid #333;
     margin-left: 20px;
